@@ -1,0 +1,76 @@
+/* 
+Responsive Navigation
+*/ 
+nav[role=navigation] {
+    clear: both;
+    transition: all 0.3s ease-out;
+}
+
+.js nav[role=navigation] {
+    max-height: 0;
+    overflow: hidden;
+}
+
+nav[role=navigation].active {
+    max-height: 15em;
+}
+
+nav[role=navigation] ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav[role=navigation] li {
+    margin: 0;
+    padding: 0;
+}
+
+nav[role=navigation] li a {
+    display: block;
+}
+		
+@media screen and (min-width: $tablet) {
+    a.menu-link {
+        display: none;
+    }
+    
+    .js nav[role=navigation] {
+        max-height: none;
+    }
+    
+    nav[role=navigation] ul {
+        border: 0;
+        margin: 0;
+    }
+
+    nav[role=navigation]  li {
+        display: inline-block;
+    }
+    
+    nav[role=navigation] li a {
+        border: 0;
+    }
+}
+
+.menu-wrap {
+    transition: all .3s linear;
+}
+
+.menu-wrap { // optional
+    box-sizing: border-box;
+    padding: $padding;
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+    }
+}
+
+.menu-wrap-styles {
+    background-color: rgba(0, 0, 0, 0.85);
+    @media screen and (min-width: $tablet) {
+        background-color: transparent;
+        height: auto;
+    }
+    height: 100vh;
+    transition: all .3s linear;
+    width: 100%;
+}

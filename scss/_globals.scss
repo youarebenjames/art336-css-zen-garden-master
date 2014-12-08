@@ -1,0 +1,48 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'), local('Muli-Light'), url(http://fonts.gstatic.com/s/muli/v7/TgrecWq39GVsTOFonFwGXQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yanone Kaffeesatz Bold'), local('YanoneKaffeesatz-Bold'), url(http://fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRbJjSLMfVFmTspsxH0yGxjj3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+
+@mixin body-font-regular {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin body-font-bold {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin headline-font {
+    font-family: 'Yanone Kaffeesatz', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}

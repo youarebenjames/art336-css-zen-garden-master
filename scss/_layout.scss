@@ -1,0 +1,86 @@
+/* 
+Layout Rules
+    CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles.
+    Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate.
+*/
+
+.sidebar {
+    Background-color: #b78f63; 
+    position: absolute;
+    top: 200px;
+    right: 0;
+    // left: 100px;
+    // bottom: 0;
+    width: 20%;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+    }
+}
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+ul {
+    list-style-type: none;  
+    
+}
+
+ul li {
+    display: block; 
+    background-color: #b2f2d6;
+    margin: 5px;
+    padding: 5px;
+    line-height: 1;
+    box-sizing: border-box;
+}
+body {
+    background-color: #CEBDA9;
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    @include body-font-regular;
+}
+
+html{
+     background-image: url('zen2.jpg');
+}
+
+.intro{
+    background-image: url('zen1.jpg')  
+}
+
+h1 {
+
+}
+
+h1, h2, h3{
+    color: white;   
+}
+
+h1, h2, .summary {
+    background-color: #CEBDA9;   
+}
+
+
+.summary {
+    color: #5D3B38;   
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.design-name {
+text-transform: uppercase;
+display: block;
+}
+
+.preamble {
+    background-color: #CEBDA9; 
+    padding: 5px;
+    box-sizing: border-box;
+}
+.designer-name {
+text-transform: lowercase;
+display: block;
+}
